@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.bawn.myapplication.SettingFragment"
+        android:label="SettingFragment" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.bawn.myapplication.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_settingFragment"
+            app:enterAnim="@anim/slide_right_in"
+            app:exitAnim="@anim/slide_left_out"
+            app:popEnterAnim="@anim/slide_left_in"
+            app:popExitAnim="@anim/slide_right_out"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_recentTopicsFrament"
+            app:destination="@id/recentTopicsFrament" />
+        <action
+            android:id="@+id/action_mainFragment_to_collectionTopicsFrament"
+            app:destination="@id/collectionTopicsFrament" />
+        <action
+            android:id="@+id/action_mainFragment_to_createFragment"
+            app:destination="@id/createFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recentTopicsFrament"
+        android:name="com.example.bawn.myapplication.RecentTopicsFrament"
+        android:label="RecentTopicsFrament" />
+    <fragment
+        android:id="@+id/collectionTopicsFrament"
+        android:name="com.example.bawn.myapplication.CollectionTopicsFrament"
+        android:label="CollectionTopicsFrament" />
+    <fragment
+        android:id="@+id/createFragment"
+        android:name="com.example.bawn.myapplication.CreateFragment"
+        android:label="CreateFragment" />
+</navigation>
