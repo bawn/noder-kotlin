@@ -16,7 +16,6 @@ class CategoryDialogFragment: BottomSheetDialogFragment() {
         return inflater.inflate(R.layout.category, container, false)
     }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         bottomSheetHeading.setOnClickListener {
@@ -25,9 +24,7 @@ class CategoryDialogFragment: BottomSheetDialogFragment() {
                 it.fragments.first { it is CreateFragment }.categoryInput.text = "4444"
             }
             this.dismiss()
-
         }
-
     }
 }
 
